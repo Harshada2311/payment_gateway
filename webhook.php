@@ -25,7 +25,7 @@ if($mac_provided == $mac_calculated){
     if($data['status'] == "Credit"){
        // Payment was successful, mark it as completed in your database  
                 
-                $to = 'harshdashinde6@gmail.com';
+                $to = 'enter your mail-id';
                 $subject = 'Website Payment Request ' .$data['name'].'';
                 $message = "<h1>Payment Details</h1>";
                 $message .= "<hr>";
