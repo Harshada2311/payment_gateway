@@ -12,7 +12,9 @@ $amount = $_POST["Amount"];
 
 include 'src/instamojo.php';
 
-$api = new Instamojo\Instamojo('test_76830de648c7cce2cc2ffb956ce', 'test_2aa4b91d83f750f90e754fc9544','https://test.instamojo.com/api/1.1/');
+
+
+$api = new Instamojo\Instamojo('YOU_PRIVATE_API_KEY', 'YOUR_PRIVATE_AUTH_TOKEN','https://test.instamojo.com/api/1.1/');
 
 
 try {
@@ -25,9 +27,10 @@ try {
         "send_sms" => true,
         "email" => $email,
         'allow_repeated_payments' => false,
-        "redirect_url" => "http://harshadashinde.000webhostapp.com/project/thankyou.php",
-        "webhook" => "http://harshadashinde.000webhostapp.com/webhook.php"
+        "redirect_url" => "http://YOUR_WEBSITE.COM/thankyou.php",
+        "webhook" => "http://YOUR_WEBSITE.COM/webhook.php"
         ));
+        
     //print_r($response);
 
     $pay_ulr = $response['longurl'];
